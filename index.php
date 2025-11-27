@@ -101,7 +101,7 @@ $result = $conn->query("SELECT * FROM hewan ORDER BY id DESC");
 
 </nav>
 <div class="container py-5">
-    <h2 class="fw-bold mb-4">Find Your New Best Friend</h2>
+    <h2 class="fw-bold mb-4">Data Hewan</h2>
 <a href="tambah_hewan.php" class="btn mb-4" style="background-color: #4f3a20ff ; color:white; ">
     + Tambah Hewan
 </a>
