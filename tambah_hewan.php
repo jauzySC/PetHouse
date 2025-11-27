@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nama = trim($_POST['nama_hewan']);
     $jenis = trim($_POST['jenis_hewan']);
-    $umur = (int)$_POST['umur'];
+    $umur = trim($_POST['umur']);
     $keterangan = trim($_POST['keterangan']);
 
 
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             (nama_hewan, jenis_hewan, umur, keterangan,gambar)
             VALUES (?, ?, ?, ?, ?)
         ");
-        $stmt->bind_param("ssiss", $nama, $jenis, $umur,$keterangan, $targetPath);
+        $stmt->bind_param("sssss", $nama, $jenis, $umur,$keterangan, $targetPath);
 
         if ($stmt->execute()) {
             $_SESSION['success'] = "Hewan <strong>" . htmlspecialchars($nama) . "</strong> berhasil ditambahkan!";
@@ -103,7 +103,7 @@ font-family: "Jersey 25", sans-serif;
 
             <div class="mb-3">
                 <label class="form-label">Umur</label>
-                <input type="number" name="umur" class="form-control" min="0" required>
+                <input type="text" name="umur" class="form-control" required>
             </div>
 
             <div class="mb-3">

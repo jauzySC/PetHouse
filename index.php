@@ -72,6 +72,16 @@ $result = $conn->query("SELECT * FROM hewan ORDER BY id DESC");
 .badge {
     font-size: 0.95rem;
 }
+.navbar-brand {
+    pointer-events: none;   /* tidak bisa di-click */
+    cursor: default;        /* cursor normal */
+    text-decoration: none !important;
+}
+.navbar-brand:hover {
+    color: inherit !important;
+    opacity: 1 !important;
+}
+
 
     </style>
 </head>
@@ -79,10 +89,10 @@ $result = $conn->query("SELECT * FROM hewan ORDER BY id DESC");
 
 <nav class="navbar navbar-expand-lg" style="background-color: #472f20ff">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center">
-            <img src="hous.png" alt="">
-            Pixel Paws
-        </a>
+       <span class="navbar-brand d-flex align-items-center">
+        <img src="hous.png" alt="">
+        Padalarang Pet House
+        </span>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>

@@ -120,7 +120,7 @@ if (!$data) {
 
             <div class="mb-3">
                 <label class="form-label">Umur</label>
-                <input type="number" name="umur" class="form-control" min="0" value="<?= $data['umur'] ?>" required>
+                <input type="text" name="umur" class="form-control"  value="<?= $data['umur'] ?>" required>
             </div>
 
             <div class="mb-3">
